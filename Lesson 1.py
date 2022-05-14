@@ -33,10 +33,24 @@ print('Сумма чисел n+nn+nnn = ', n_n_n_int)
 # Заждание 4.
 # Пользователь вводит целое положительное число. Найдите самую большую цифру в числе.
 # Для решения используйте цикл while и арифметические операции.
-cel_plus = str(input('введите целое положительное число'))
-print(list(cel_plus))
-print(max(list(cel_plus)))
-
+print('Задание 4')
+cel_plus = int(input('введите целое положительное число'))
+print(list(str(cel_plus)))
+print('С помощью операции max', max(list(str(cel_plus))))
+print('Теперь с помощью математических операций')
+max_cel_plus = cel_plus % 10
+print(max_cel_plus)
+while cel_plus >= 1:
+    cel_plus = cel_plus // 10
+    print (cel_plus)
+    if cel_plus % 10 > max_cel_plus:
+        print (cel_plus)
+        print(max_cel_plus)
+        max_cel_plus = cel_plus % 10
+        print(max_cel_plus)
+    elif cel_plus > 9:
+        pass
+print('Максимальная цифра в числе', max_cel_plus)
 
 # Задание 5
 # Запросите у пользователя значения выручки и издержек фирмы. Определите, с каким финансовым результатом работает фирма.
