@@ -8,7 +8,8 @@ c = 'привет'
 print(a, b, c)
 d = input('Ведите число')
 e= input('Ведите строку')
-print('Это то, что ввел пользователь', d, e)
+print('Это то, что ввел пользователь - ', d, e)
+print('')
 
 # Задание 2.
 # Пользователь вводит время в секундах. Переведите время в часы, минуты, секунды и выведите в формате чч:мм:сс.
@@ -18,7 +19,7 @@ time_sec = int(input('Введите время в секундах'))
 time_min_cel = time_sec // 60
 time_h_cel = time_min_cel // 60
 print('Время в чч:мм:сс:', time_h_cel, ':', time_min_cel - time_h_cel * 60, ':', time_sec - time_min_cel * 60 )
-
+print('')
 
 # Заждание 3.
 # Узнайте у пользователя число n. Найдите сумму чисел n + nn + nnn. Например, пользователь ввёл число 3.
@@ -29,28 +30,30 @@ n_n = n_str + n_str
 n_n_n = n_str + n_str + n_str
 n_n_n_int = int(n_str) + int(n_n) + int(n_n_n)
 print('Сумма чисел n+nn+nnn = ', n_n_n_int)
+print('')
 
 # Заждание 4.
 # Пользователь вводит целое положительное число. Найдите самую большую цифру в числе.
 # Для решения используйте цикл while и арифметические операции.
 print('Задание 4')
 cel_plus = int(input('введите целое положительное число'))
-print(list(str(cel_plus)))
-print('С помощью операции max', max(list(str(cel_plus))))
+# print(list(str(cel_plus)))
+print('С помощью операции max самая большая цифра - ', max(list(str(cel_plus))))
 print('Теперь с помощью математических операций')
 max_cel_plus = cel_plus % 10
-print(max_cel_plus)
+# print(max_cel_plus)
 while cel_plus >= 1:
     cel_plus = cel_plus // 10
-    print (cel_plus)
+    # print (cel_plus)
     if cel_plus % 10 > max_cel_plus:
-        print (cel_plus)
-        print(max_cel_plus)
+        # print (cel_plus)
+        # print(max_cel_plus)
         max_cel_plus = cel_plus % 10
-        print(max_cel_plus)
+        # print(max_cel_plus)
     elif cel_plus > 9:
         pass
 print('Максимальная цифра в числе', max_cel_plus)
+print('')
 
 # Задание 5
 # Запросите у пользователя значения выручки и издержек фирмы. Определите, с каким финансовым результатом работает фирма.
@@ -69,6 +72,7 @@ if earn > costs:
     print('Прибыль фирмы в расчите на одного сотрудника', (earn - costs) / chisl_sotr)
 else:
   print('Фирма работает с убытком', abs(earn - costs))
+print('')
 
 # Задание 7
 # Спортсмен занимается ежедневными пробежками. В первый день его результат составил a километров. Каждый день спортсмен
